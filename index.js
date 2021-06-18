@@ -167,8 +167,18 @@ function greeting(a, b){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(attrs){
+  this.length = attrs.length;
+  this.width = attrs.width;
+  this.height = attrs.height;
+}
+
+CuboidMaker.prototype.volume = function(){
+  return this.length * this.width * this.height
+}
+
+CuboidMaker.prototype.surfaceArea = function(){
+  return (2 * this.length * this.width) + (2 * this.length * this.height) + (2 * this.height * this.width);
 }
 
 
