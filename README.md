@@ -27,15 +27,25 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
-1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max).
+.forEach and .map are both methods meant for working with data inside of arrays, however there are significant differences in what they are used for. .forEach is used mainly to view (not change) data inside of an array by iterating over each element. .map is used for converting data inside of an array and returns a new array with the converted data, leaving the original array unchanged.
 
 2. Explain the difference between a callback and a higher order function.
+A higher order function is a function that takes other functions as arguments. The function that is passed in as an argument is the callback function.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
+Closure is a function having access to outer functions' scope or the global scope--these things are within an inner function's 'lexical environment.' Functions can reach outside of themselves but not into nested functions. In the counter function that I wrote, closure occurs when the 'array' variable is accessed when using the reduce function.
 
 4. Describe the four principles of the 'this' keyword.
+-window binding: if we do not give 'this' any context, it will will return the window to us, the global object in node, or undefined in 'strict mode.'
+-implicit binding: the most commonly used case--when we use 'this' in an object with a method. In this case, the 'this' will refer to whatever is to the left of the dot.
+-explicit binding: when we use .bind, .call, or .apply to pass in as an argument whatever we want 'this' to refer to.
+-new binding: when a constructor function is invoked to create a new object using the 'new' keyword. 'This' will now refer to the new object.
 
 5. Why do we need super() in an extended class?
+
+Super gives the extended class access to the parent's properties and methods.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
